@@ -4,6 +4,80 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+//edit back to intro
+window.onload = intro();
+
+
+document.getElementById("exit").setAttribute('onclick', 'location.href = "file:///E:/Games%20site/Pop%20Motion%20Slider/slider.html"'); 
+document.getElementById("about").setAttribute('onclick', 'location.href = "file:///E:/Games%20site/Hangman%20Game/hangman.html"'); 
+
+
+function dropdownmenu(){
+ if (menu.value == 'intro') {
+    intro();
+  } else if (menu.value == 'transportation') {
+    transportation();
+  } else if (menu.value == 'animal') {
+    animal();
+  } else if (menu.value == 'emotions') {
+    emotions();
+    } else if (menu.value == 'job') {
+    job();
+}
+}
+
+function intro(){
+    document.getElementById('introPage').style.display = "block";
+    document.getElementById('transportation').style.display = "none";
+    document.getElementById('animal').style.display = "none";
+    document.getElementById('job').style.display = "none";
+    document.getElementById('emotions').style.display = "none";
+    
+}
+
+function animal(){
+    document.getElementById('introPage').style.display = "none";
+    document.getElementById('transportation').style.display = "none";
+    document.getElementById('animal').style.display = "block";
+    document.getElementById('job').style.display = "none";
+    document.getElementById('emotions').style.display = "none";
+
+    
+}
+
+function transportation(){
+    document.getElementById('introPage').style.display = "none";
+    document.getElementById('transportation').style.display = "block";
+    document.getElementById('animal').style.display = "none";
+    document.getElementById('job').style.display = "none";
+    document.getElementById('emotions').style.display = "none";
+    
+}
+
+function job(){
+    document.getElementById('introPage').style.display = "none";
+    document.getElementById('transportation').style.display = "none";
+    document.getElementById('animal').style.display = "none";
+    document.getElementById('job').style.display = "block";
+    document.getElementById('emotions').style.display = "none";
+    
+}
+
+function emotions(){
+    document.getElementById('introPage').style.display = "none";
+    document.getElementById('transportation').style.display = "none";
+    document.getElementById('animal').style.display = "none";
+    document.getElementById('job').style.display = "none";
+    document.getElementById('emotions').style.display = "block";
+    
+}
+
+
+
+
+
+
+
 function flipCard() {
 	if(lockBoard) return;
 	if(this=== firstCard) return;
@@ -69,3 +143,8 @@ function unflipCards() {
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+
+//why does this only work when its at the end, otherwise, thie variable at the begining disables the cards??
+var menu = document.getElementById("themes");
+menu.addEventListener("themes", generateData);

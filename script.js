@@ -12,6 +12,8 @@ document.getElementById("exit").setAttribute('onclick', 'location.href = "file:/
 document.getElementById("about").setAttribute('onclick', 'location.href = "file:///E:/Games%20site/Hangman%20Game/hangman.html"'); 
 
 
+
+
 function dropdownmenu(){
  if (menu.value == 'intro') {
     intro();
@@ -72,7 +74,12 @@ function emotions(){
     
 }
 
-
+var oreos = document.getElementsByClassName('label');
+for (var i = 0; i < oreos.length; i++) {
+    oreos[i].addEventListener('click', function() {
+    window.location.href = "https://dougwperez.github.io/Memory-Match/";
+    });
+};
 
 
 

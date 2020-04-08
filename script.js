@@ -35,19 +35,19 @@ function dropdownmenu(){
 }
 
 function transportation() {
-    window.location.href = 'file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/transportation.html';
+    window.location.href = 'https://dougwperez.github.io/Memory-Match/categories/transportation.html';
 }
 
 function animal() {
-    window.location.href = 'file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/animal.html';
+    window.location.href = 'https://dougwperez.github.io/Memory-Match/categories/animal.html';
 }
 
 function emotions() {
-    window.location.href = 'file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/emotions.html';
+    window.location.href = 'https://dougwperez.github.io/Memory-Match/categories/emotions.html';
 }
 
 function job() {
-    window.location.href = 'file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/job.html';
+    window.location.href = 'https://dougwperez.github.io/Memory-Match/categories/job.html';
 }
 
 

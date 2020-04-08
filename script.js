@@ -4,6 +4,20 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+function right() {
+document.getElementById("blank").src='../right.mp3';
+};
+
+
+
+function wrong() {
+document.getElementById("blank").src='../wrong.mp3';
+};
+
+
+
+
+
 
 function dropdownmenu(){
  if (menu.value == 'intro') {
@@ -21,20 +35,21 @@ function dropdownmenu(){
 }
 
 function transportation() {
-    window.location.href = 'https://dougwperez.github.io/Memory-Match/categories/transportation.html';
+    window.location.href = 'file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/transportation.html';
 }
 
 function animal() {
-    window.location.href = 'https://dougwperez.github.io/Memory-Match/categories/animal.html';
+    window.location.href = 'file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/animal.html';
 }
 
 function emotions() {
-    window.location.href = 'https://dougwperez.github.io/Memory-Match/categories/emotions.html';
+    window.location.href = 'file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/emotions.html';
 }
 
 function job() {
-    window.location.href = 'https://dougwperez.github.io/Memory-Match/categories/job.html';
+    window.location.href = 'file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/job.html';
 }
+
 
 
 
@@ -69,8 +84,12 @@ function checkForMatch() {
 		if (firstCard.dataset.framework === secondCard.dataset.framework) {
 			//its a matach!
 			disableCards();
+			right();
+
 		} else {
 			unflipCards();
+			wrong();
+
 			
 	}
 }
@@ -78,7 +97,13 @@ function disableCards(){
 	firstCard.removeEventListener('click', flipCard);
 	secondCard.removeEventListener('click', flipCard);
 
-	resetBoard();
+	lockBoard = true;
+	setTimeout(() => {
+		firstCard.style.visibility='hidden';
+		secondCard.style.visibility='hidden';
+		lockBoard = false;
+		resetBoard();
+		}, 1400);
 }
 
 function unflipCards() {

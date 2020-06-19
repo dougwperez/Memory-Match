@@ -29,7 +29,7 @@ function dropdownmenu() {
 
 function transportation() {
   window.location.href =
-    "file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/transportation.html";
+    "https://dougwperez.github.io/Memory-Match/categories/transportation.html";
 }
 
 function animal() {

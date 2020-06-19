@@ -34,17 +34,17 @@ function transportation() {
 
 function animal() {
   window.location.href =
-    "file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/animal.html";
+    "https://dougwperez.github.io/Memory-Match/categories/animal.html";
 }
 
 function emotions() {
   window.location.href =
-    "file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/emotions.html";
+    "https://dougwperez.github.io/Memory-Match/categories/emotions.html";
 }
 
 function job() {
   window.location.href =
-    "file:///C:/Users/snuffydoug/Desktop/mmfinal/categories/job.html";
+    "https://dougwperez.github.io/Memory-Match/categories/job.html";
 }
 
 function flipCard() {
